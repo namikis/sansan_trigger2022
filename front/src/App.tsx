@@ -1,10 +1,21 @@
-import React from 'react';
+import { Provider } from 'react-redux';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import store from './store';
+import TopPage from './pages/TopPage';
+import BookDetails from './pages/BookDetails';
 
 function App() {
   return (
-    <div className="App">
-      <p>Welcome sansan_trigger2022</p>
-    </div>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<TopPage />} />
+          <Route path="/book" element={<BookDetails />}>
+            <Route path=":postId" element={<BookDetails />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   );
 }
 
