@@ -31,11 +31,11 @@ const ReviewPage = () => {
         <BookDescriptionSmall {...bookDescriptionProps} />
         <BigText text="この本をレビュー" />
         <ReactStars
-                count={5}
-                value={star}
-                size={12}
-                edit={false}
-              />
+          count={5}
+          value={star}
+          size={12}
+          edit={false}
+        />
         <Link to={`/post/${bookId}`}><MediumText text="レビューを書く" /></Link>
         <ReviewList bookId={bookId} />
       </div>
