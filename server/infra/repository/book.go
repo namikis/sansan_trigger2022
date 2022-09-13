@@ -1,8 +1,7 @@
 package repository
 
 import (
-	"database/sql"
-
+	"github.com/jmoiron/sqlx"
 	"github.com/namikis/sansan_trigger2022/domain/entity"
 	"github.com/namikis/sansan_trigger2022/domain/repository"
 )
@@ -11,10 +10,10 @@ import (
 // これによりRepositoryがdomainに依存している
 
 type bookRepository struct {
-	Db *sql.DB
+	Db *sqlx.DB
 }
 
-func NewBookRepository(db *sql.DB) repository.BookRepository {
+func NewBookRepository(db *sqlx.DB) repository.BookRepository {
 	return bookRepository{
 		Db: db,
 	}
@@ -46,11 +45,11 @@ func (bu bookRepository) GetBookById(i int) (entity.Book, error) {
 	// jmoiron/sqlx
 	query := "SELECT id,isbn,title,author,image_url from books where id = $1"
 
-	row := bu.Db.QueryRow(query, i)
+	row := bu.Db.QueryRowx(query, i)
 
 	bk := entity.Book{}
 
-	if err := row.Scan(&bk.Id, &bk.Isbn, &bk.Title, &bk.Author, &bk.Image_url); err != nil {
+	if err := row.StructScan(&bk); err != nil { //結果をBook形式で自動で格納
 		return bk, err
 	}
 	return bk, nil
