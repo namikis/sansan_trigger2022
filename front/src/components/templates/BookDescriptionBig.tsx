@@ -2,6 +2,7 @@ import BigText from "../atoms/Text/BigText";
 import MediumText from "../atoms/Text/MediumText";
 import SmallText from "../atoms/Text/SmallText";
 import BookImage from "../atoms/Image/BookImage";
+import ReactStars from "react-stars";
 
 export type BookDescriptionPropsType = {
   title: string;
@@ -29,7 +30,12 @@ const BookDescription = ({title, star, auther, publisher, date, description}: Bo
           </div>
           <div className="col-span-3 px-3">
             <BigText text={title} />
-            <SmallText text={`星${star}`} />
+            <ReactStars
+              count={5}
+              value={star}
+              size={12}
+              edit={false}
+            />
             <MediumText text={`著者：${auther}`} />
             <MediumText text={`出版社：${publisher}`} />
             <MediumText text={`出版日：${formatDate(date)}`} />

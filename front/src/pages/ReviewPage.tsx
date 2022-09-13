@@ -5,6 +5,7 @@ import ReviewList from "../components/templates/ReviewList";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import BookDescriptionSmall, { BookDescriptionSmallPropsType } from "../components/templates/BookDescriptionSmall";
+import ReactStars from "react-stars";
 
 const ReviewPage = () => {
   const bookId = Number(useParams().postId);
@@ -29,6 +30,12 @@ const ReviewPage = () => {
       <div className="container mx-auto my-4 px-4">
         <BookDescriptionSmall {...bookDescriptionProps} />
         <BigText text="この本をレビュー" />
+        <ReactStars
+                count={5}
+                value={star}
+                size={12}
+                edit={false}
+              />
         <Link to={`/post/${bookId}`}><MediumText text="レビューを書く" /></Link>
         <ReviewList bookId={bookId} />
       </div>

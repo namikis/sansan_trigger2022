@@ -6,6 +6,7 @@ import MediumText from "../components/atoms/Text/MediumText";
 import SmallText from "../components/atoms/Text/SmallText";
 import BookDescription, {BookDescriptionPropsType} from "../components/templates/BookDescriptionBig";
 import { Link } from "react-router-dom";
+import ReactStars from "react-stars";
 
 const BookDetails = () => {
   const bookId = Number(useParams().postId);
@@ -32,6 +33,12 @@ const BookDetails = () => {
       <div className="container mx-auto my-4 px-4">
         <BookDescription {...bookDescriptionProps} />
         <BigText text="みんなのレビュー" />
+        <ReactStars
+          count={5}
+          value={star}
+          size={12}
+          edit={false}
+        />
         <Link to={`/review/${bookId}`}><SmallText text={`${numReviews}件`} /></Link>
         <Link to={`/post/${bookId}`}><MediumText text="レビューを書く" /></Link>
         <ReviewList bookId={bookId} />
