@@ -16,6 +16,7 @@ func NewDriver() *sql.DB {
 		panic(err)
 	}
 	log.Println("db connect success")
+	log.Println("test message")
 
 	return db
 }

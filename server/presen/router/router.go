@@ -17,5 +17,6 @@ func InitBookRouter(e *gin.Engine, bh handler.BookHandler) {
 
 	eBook.GET("/random", bh.GetRandom)
 	eBook.GET("/count", bh.GetCount)
+	eBook.GET("/:id", bh.GetBookById)
 
 }

@@ -33,10 +33,25 @@ func (bu bookRepository) GetRandom() (entity.Book, error) {
 }
 
 func (bu bookRepository) GetCount() (int, error) {
-	// sqlとの接続
-	// jmoiron/sqlx
+	//
+	// test
 
 	bookcount := 10
 
 	return bookcount, nil
+}
+
+func (bu bookRepository) GetBookById(i int) (entity.Book, error) {
+	// sqlとの接続
+	// jmoiron/sqlx
+	query := "SELECT id,isbn,title,author,image_url from books where id = $1"
+
+	row := bu.Db.QueryRow(query, i)
+
+	bk := entity.Book{}
+
+	if err := row.Scan(&bk.Id, &bk.Isbn, &bk.Title, &bk.Author, &bk.Image_url); err != nil {
+		return bk, err
+	}
+	return bk, nil
 }
