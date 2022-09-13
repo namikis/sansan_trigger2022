@@ -1,4 +1,4 @@
-import BookCard from "../atoms/Card/BookCard"
+import BookCard from "../modules/Card/BookCard"
 
 const BookList = () => {
   return (

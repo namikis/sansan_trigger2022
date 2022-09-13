@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import MediumText from "../../../atoms/Text/MediumText"
 import SmallText from "../../../atoms/Text/SmallText"
-import BookImage from "../../Image/BookImage"
+import BookImage from "../../../atoms/Image/BookImage"
 
 const index = () => {
   return (
