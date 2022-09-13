@@ -34,10 +34,14 @@ func (bu bookRepository) GetRandom() (entity.Book, error) {
 func (bu bookRepository) GetCount() (int, error) {
 	//
 	// test
+	query := "SELECT COUNT(id) from books"
+	row := bu.Db.QueryRowx(query)
+	_num := 0
+	if err := row.Scan(&_num); err != nil {
+		return _num, err
+	}
 
-	bookcount := 10
-
-	return bookcount, nil
+	return _num, nil
 }
 
 func (bu bookRepository) GetBookById(i int) (entity.Book, error) {
