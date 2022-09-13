@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 	"strconv"
@@ -14,6 +15,7 @@ type BookHandler interface {
 	GetRandom(ctx *gin.Context)
 	GetCount(ctx *gin.Context)
 	GetBookById(ctx *gin.Context)
+	GetBooks(ctx *gin.Context)
 }
 
 type bookHandler struct {
@@ -64,6 +66,24 @@ func (bh bookHandler) GetBookById(ctx *gin.Context) {
 		ctx.JSON(http.StatusBadRequest, gin.H{"error": "not fond"})
 		return
 	}
+	ctx.JSON(http.StatusOK, gin.H{
+		"result": bookRes,
+	})
+}
+
+func (bh bookHandler) GetBooks(ctx *gin.Context) {
+	_id, err := strconv.Atoi(ctx.Param("offset"))
+	if err != nil {
+		ctx.JSON(http.StatusBadRequest, gin.H{"error": "not number"})
+		return
+	}
+	log.Printf("id is %d", _id)
+	bookRes, err := bh.bookUsecase.GetBooks(_id)
+	if err != nil {
+		ctx.JSON(http.StatusBadRequest, gin.H{"error": "not fond"})
+		return
+	}
+	fmt.Println(bookRes)
 	ctx.JSON(http.StatusOK, gin.H{
 		"result": bookRes,
 	})
