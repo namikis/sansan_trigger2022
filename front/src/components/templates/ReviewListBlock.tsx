@@ -22,8 +22,8 @@ const ReviewListBlock = ({bookId, maxCardNum, star, numReviews}: ReviewListBlock
         size={12}
         edit={false}
       />
-      <SmallText text={`${numReviews}件`} />
-      <Link to={`/post/${bookId}`}><MediumText text="レビューを書く" /></Link>
+      <SmallText text={`${numReviews}件`} color='border-gray-700'/>
+      <Link to={`/post/${bookId}`}><MediumText text="レビューを書く" color='border-gray-700'/></Link>
       <ReviewList bookId={bookId} maxCardNum={maxCardNum} />
     </div>
   );

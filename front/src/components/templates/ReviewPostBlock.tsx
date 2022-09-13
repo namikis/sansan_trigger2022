@@ -13,7 +13,7 @@ const ReviewPostBlock = ({bookId}: ReviewPostBlockPropsType) => {
     <div>
       <BigText text="この本をレビュー" />
       <div>
-        <MediumText text="評価" />
+        <MediumText text="評価" color='border-gray-700'/>
         <ReactStars
           count={5}
           value={0}
@@ -21,11 +21,11 @@ const ReviewPostBlock = ({bookId}: ReviewPostBlockPropsType) => {
         />
       </div>
       <div>
-        <MediumText text="レビュータイトル" />
+        <MediumText text="レビュータイトル" color='border-gray-700'/>
         <Input placeholder="最も伝えたいポイントは何ですか？" />
       </div>
       <div>
-        <MediumText text="レビューを追加" />
+        <MediumText text="レビューを追加" color='border-gray-700'/>
         <Input placeholder="気に入ったこと/気に入らなかったことは何ですか？この製品をどのように使いましたか？" />
       </div>
       <Link to={`/book/${bookId}`}>投稿</Link>
