@@ -1,17 +1,14 @@
 import { useParams } from "react-router-dom";
 import Header from "../components/layouts/Header";
-import ReviewList from "../components/templates/ReviewList";
-import BigText from "../components/atoms/Text/BigText";
 import MediumText from "../components/atoms/Text/MediumText";
-import SmallText from "../components/atoms/Text/SmallText";
 import BookDescription, {BookDescriptionPropsType} from "../components/templates/BookDescriptionBig";
 import { Link } from "react-router-dom";
-import ReactStars from "react-stars";
+import ReviewListBlock from "../components/templates/ReviewListBlock";
 
 const BookDetails = () => {
   const bookId = Number(useParams().postId);
   const title = "本のタイトル";
-  const star = 5;
+  const star = 3.5;
   const auther = "著者名著者名";
   const publisher = "出版社出版社出版社";
   const date = new Date("2000/1/1");
@@ -25,6 +22,8 @@ const BookDetails = () => {
     publisher,
     date,
     description,
+    numReviews,
+    bookId
   }
 
   return (
@@ -32,16 +31,8 @@ const BookDetails = () => {
       <Header isLogin={false} />
       <div className="container mx-auto my-4 px-4">
         <BookDescription {...bookDescriptionProps} />
-        <BigText text="みんなのレビュー" />
-        <ReactStars
-          count={5}
-          value={star}
-          size={12}
-          edit={false}
-        />
-        <Link to={`/review/${bookId}`}><SmallText text={`${numReviews}件`} /></Link>
-        <Link to={`/post/${bookId}`}><MediumText text="レビューを書く" /></Link>
-        <ReviewList bookId={bookId} />
+        <ReviewListBlock bookId={bookId} maxCardNum={3} star={star} numReviews={numReviews} />
+        <Link to={`/review/${bookId}`}><MediumText text="もっとレビューを見る" /></Link>
       </div>
     </div>
   );

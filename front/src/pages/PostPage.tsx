@@ -6,7 +6,7 @@ import ReviewPostBlock from "../components/templates/ReviewPostBlock";
 const PostPage = () => {
   const bookId = Number(useParams().postId);
   const title = "本のタイトル";
-  const star = 5;
+  const star = 3.5;
   const auther = "著者名著者名";
   const publisher = "出版社出版社出版社";
   const date = new Date("2000/1/1");
@@ -18,6 +18,8 @@ const PostPage = () => {
     auther,
     publisher,
     date,
+    numReviews,
+    bookId
   }
 
   return (

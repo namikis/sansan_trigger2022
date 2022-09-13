@@ -3,6 +3,7 @@ import MediumText from "../atoms/Text/MediumText";
 import SmallText from "../atoms/Text/SmallText";
 import BookImage from "../atoms/Image/BookImage";
 import ReactStars from "react-stars";
+import { Link } from "react-router-dom";
 
 export type BookDescriptionPropsType = {
   title: string;
@@ -11,9 +12,11 @@ export type BookDescriptionPropsType = {
   publisher: string;
   date: Date;
   description: string;
+  numReviews: number;
+  bookId: number
 }
 
-const BookDescription = ({title, star, auther, publisher, date, description}: BookDescriptionPropsType) => {
+const BookDescription = ({title, star, auther, publisher, date, description, numReviews, bookId}: BookDescriptionPropsType) => {
   const formatDate = (date: Date) => {
     const y = date.getFullYear();
     const m = ("00" + (date.getMonth()+1)).slice(-2);
@@ -36,6 +39,7 @@ const BookDescription = ({title, star, auther, publisher, date, description}: Bo
               size={12}
               edit={false}
             />
+            <Link to={`/review/${bookId}`}><SmallText text={`${numReviews}件`} /></Link>
             <MediumText text={`著者：${auther}`} />
             <MediumText text={`出版社：${publisher}`} />
             <MediumText text={`出版日：${formatDate(date)}`} />
