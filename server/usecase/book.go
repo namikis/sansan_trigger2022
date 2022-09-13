@@ -6,7 +6,8 @@ import (
 )
 
 type BookUsecase interface {
-	GetRandom() (entity.Book,error)
+	GetRandom() (entity.Book, error)
+	GetCount() (int, error)
 }
 
 type bookUsecase struct {
@@ -19,7 +20,12 @@ func NewBookUsecase(br repository.BookRepository) BookUsecase {
 	}
 }
 
-func (bu bookUsecase) GetRandom() (entity.Book,error) {
-	book,err:= bu.bookRepository.GetRandom()
-	return book,err
+func (bu bookUsecase) GetRandom() (entity.Book, error) {
+	book, err := bu.bookRepository.GetRandom()
+	return book, err
+}
+
+func (bu bookUsecase) GetCount() (int, error) {
+	_count, err := bu.bookRepository.GetCount()
+	return _count, err
 }

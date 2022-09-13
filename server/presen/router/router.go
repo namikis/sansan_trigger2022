@@ -5,9 +5,9 @@ import (
 	"github.com/namikis/sansan_trigger2022/presen/handler"
 )
 
-func InitRouter(bh handler.BookHandler) *gin.Engine{
+func InitRouter(bh handler.BookHandler) *gin.Engine {
 	e := gin.Default()
-	InitBookRouter(e,bh)
+	InitBookRouter(e, bh)
 
 	return e
 }
@@ -15,6 +15,7 @@ func InitRouter(bh handler.BookHandler) *gin.Engine{
 func InitBookRouter(e *gin.Engine, bh handler.BookHandler) {
 	eBook := e.Group("/book")
 
-	eBook.GET("/random",bh.GetRandom)
+	eBook.GET("/random", bh.GetRandom)
+	eBook.GET("/count", bh.GetCount)
 
 }
