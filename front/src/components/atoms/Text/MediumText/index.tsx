@@ -1,9 +1,9 @@
 import React from 'react'
 
-const index:React.FC<{text:string}> = ({text}) => {
+const index:React.FC<{text:string, color:string}> = ({text, color}) => {
   return (
     <>
-        <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+        <h1 className={`title-font text-xl font-medium ${color} mb-3`}>
             {text ? text : "タイトル"}
         </h1>
     </>

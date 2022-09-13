@@ -7,13 +7,14 @@ import BookImage from "../../../atoms/Image/BookImage"
 
 const index:React.FC<{index:number}> = ({index}) => {
   return (
-    <div className="p-1 lg:w-1/5 md:w-1/3">
+    <div className="p-2 lg:w-1/4 md:w-1/3 my-2">
         <Link to={`/book/${index}`}>
-        <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+        <div className="h-full bg-brown-base rounded-lg overflow-hidden shadow-lg">
             <BookImage />
-            <div className="p-6">
-                <MediumText text={"タイトル タイトル タイトル"}/>
-                <SmallText text={""}/>
+            <div className='border border-gray-200 my-1 mx-1'></div>
+            <div className="p-6 bg-brown-llight">
+                <MediumText text={"入門 Python3"} color='text-brown-dark'/>
+                <SmallText text={"sub sub sub"} color='text-brown-dark'/>
             </div>
         </div>
         </Link>
