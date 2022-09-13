@@ -20,16 +20,23 @@ func NewBookRepository(db *sql.DB) repository.BookRepository {
 	}
 }
 
-
 func (bu bookRepository) GetRandom() (entity.Book, error) {
 	// sqlとの接続
 	// jmoiron/sqlx
 
 	book := entity.Book{
-		Id: 1,
+		Id:    1,
 		Title: "book1",
 	}
 
 	return book, nil
 }
 
+func (bu bookRepository) GetCount() (int, error) {
+	// sqlとの接続
+	// jmoiron/sqlx
+
+	bookcount := 10
+
+	return bookcount, nil
+}
