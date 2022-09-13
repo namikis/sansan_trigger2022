@@ -1,6 +1,6 @@
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import store from './store';
+import store from './store/store';
 import TopPage from './pages/TopPage';
 import BookDetails from './pages/BookDetails';
 
