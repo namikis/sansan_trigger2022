@@ -58,3 +58,23 @@ func (bu bookRepository) GetBookById(i int) (entity.Book, error) {
 	}
 	return bk, nil
 }
+
+func (bu bookRepository) GetBooks(offset int) (entity.Booklist, error) {
+	// sqlとの接続
+	// jmoiron/sqlx
+	query := "SELECT id,isbn,title,author,image_url FROM books ORDER BY id LIMIT 100 OFFSET $1"
+	var booklist entity.Booklist
+	rows, err := bu.Db.Queryx(query, offset)
+	if err != nil {
+		return booklist, err
+	}
+
+	for rows.Next() {
+		var book entity.Book
+		if err := rows.StructScan(&book); err == nil { //結果をBook形式で自動で格納
+			booklist = append(booklist, book)
+		}
+	}
+
+	return booklist, nil
+}

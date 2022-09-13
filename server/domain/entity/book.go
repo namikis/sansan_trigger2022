@@ -7,3 +7,5 @@ type Book struct {
 	Author    string `db:"author"`
 	Image_url string `db:"image_url"`
 }
+
+type Booklist []Book
