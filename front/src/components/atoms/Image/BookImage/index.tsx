@@ -1,6 +1,6 @@
 import React from 'react'
 
-import icon from '../../../../images/book.jpeg';
+import icon from '../../../../assets/images/book.jpeg';
 
 const index = () => {
   return (

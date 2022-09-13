@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../components/layouts/Header';
 import BookList from '../components/templates/BookList';
-import banner from '../images/banner.png';
+import banner from '../assets/images/banner.png';
 
 const TopPage = () => {
   return (

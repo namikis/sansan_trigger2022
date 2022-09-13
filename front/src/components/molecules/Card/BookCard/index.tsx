@@ -12,8 +12,8 @@ const index = () => {
         <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
             <BookImage />
             <div className="p-6">
-                <MediumText title={"タイトル タイトル タイトル"}/>
-                <SmallText title={""}/>
+                <MediumText text={"タイトル タイトル タイトル"}/>
+                <SmallText text={""}/>
             </div>
         </div>
         </Link>
