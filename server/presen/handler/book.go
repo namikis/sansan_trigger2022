@@ -1,7 +1,9 @@
 package handler
 
 import (
+	"log"
 	"net/http"
+	"strconv"
 
 	"github.com/gin-gonic/gin"
 	"github.com/namikis/sansan_trigger2022/presen/response"
@@ -11,6 +13,7 @@ import (
 type BookHandler interface {
 	GetRandom(ctx *gin.Context)
 	GetCount(ctx *gin.Context)
+	GetBookById(ctx *gin.Context)
 }
 
 type bookHandler struct {
@@ -46,5 +49,22 @@ func (bh bookHandler) GetCount(ctx *gin.Context) {
 
 	ctx.JSON(http.StatusOK, gin.H{
 		"count": _count,
+	})
+}
+
+func (bh bookHandler) GetBookById(ctx *gin.Context) {
+	_id, err := strconv.Atoi(ctx.Param("id"))
+	if err != nil {
+		ctx.JSON(http.StatusBadRequest, gin.H{"error": "not number"})
+		return
+	}
+	log.Printf("id is %d", _id)
+	bookRes, err := bh.bookUsecase.GetBookById(_id)
+	if err != nil {
+		ctx.JSON(http.StatusBadRequest, gin.H{"error": "not fond"})
+		return
+	}
+	ctx.JSON(http.StatusOK, gin.H{
+		"result": bookRes,
 	})
 }
