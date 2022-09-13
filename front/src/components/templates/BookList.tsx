@@ -6,7 +6,7 @@ const BookList = () => {
       <div className="container px-0 py-6 mx-auto">
         <div className="flex flex-wrap -m-1">
           {[...Array(20)].map((_, i) => i).map((num, index) =>
-            <BookCard key={index}/>
+            <BookCard index={index} key={index}/>
           )}
         </div>
       </div>

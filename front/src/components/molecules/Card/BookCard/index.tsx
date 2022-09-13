@@ -5,7 +5,7 @@ import MediumText from "../../../atoms/Text/MediumText"
 import SmallText from "../../../atoms/Text/SmallText"
 import BookImage from "../../../atoms/Image/BookImage"
 
-const index = () => {
+const index:React.FC<{index:number}> = ({index}) => {
   return (
     <div className="p-1 lg:w-1/5 md:w-1/3">
         <Link to={`/book/${index}`}>
