@@ -2,7 +2,7 @@ import React from 'react'
 
 import icon from '../../../../assets/images/book.jpeg';
 
-const index = () => {
+const BookImage = () => {
   return (
     <>
       <div className='my-2'>
@@ -12,4 +12,4 @@ const index = () => {
   )
 }
 
-export default index
+export default BookImage;

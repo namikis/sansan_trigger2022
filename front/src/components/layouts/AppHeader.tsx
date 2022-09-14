@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 
-type HeaderPropsType = {
+type AppHeaderPropsType = {
   isLogin: Boolean
 };
 
-const Header = ({isLogin}: HeaderPropsType) => {
+const AppHeader = ({isLogin}: AppHeaderPropsType) => {
   return (
   <header className="">
     <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
@@ -37,4 +37,4 @@ const Header = ({isLogin}: HeaderPropsType) => {
   )
 }
 
-export default Header
+export default AppHeader

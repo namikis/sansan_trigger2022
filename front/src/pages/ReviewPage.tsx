@@ -1,4 +1,4 @@
-import Header from "../components/layouts/Header";
+import AppHeader from "../components/layouts/AppHeader";
 import { useParams } from "react-router-dom";
 import BookDescriptionSmall, { BookDescriptionSmallPropsType } from "../components/templates/BookDescriptionSmall";
 import ReviewListBlock from "../components/templates/ReviewListBlock";
@@ -24,7 +24,7 @@ const ReviewPage = () => {
 
   return (
     <div>
-      <Header isLogin={true} />
+      <AppHeader isLogin={true} />
       <div className="container mx-auto my-4 px-4">
         <BookDescriptionSmall {...bookDescriptionProps} />
         <ReviewListBlock bookId={bookId} maxCardNum={100} star={star} numReviews={numReviews} />

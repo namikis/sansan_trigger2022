@@ -7,7 +7,7 @@ type SmallTextPropsType = {
   inlineBlock?: boolean;
 }
 
-const index:React.FC<SmallTextPropsType> = ({text="", color="", margin=true, inlineBlock=false}) => {
+const SmallText:React.FC<SmallTextPropsType> = ({text="", color="", margin=true, inlineBlock=false}) => {
   return (
     <div className={`tracking-widest title-font font${color} ${margin && "mb-1"} ${inlineBlock && "inline-block"}`}>
       {text ? text : "タイトル"}
@@ -15,4 +15,4 @@ const index:React.FC<SmallTextPropsType> = ({text="", color="", margin=true, inl
   )
 }
 
-export default index
+export default SmallText

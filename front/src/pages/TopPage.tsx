@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../components/layouts/Header';
+import AppHeader from '../components/layouts/AppHeader';
 import BookList from '../components/templates/BookList';
 import banner from '../assets/images/banner.png';
 
@@ -13,7 +13,7 @@ import SearchLottie from '../components/atoms/Lottie/SearchLottie';
 const TopPage = () => {
   return (
     <div>
-      <Header isLogin={false} />
+      <AppHeader isLogin={false} />
   
       <div className='bg-brown-light py-12'>
         <AppContainer>
