@@ -6,11 +6,7 @@ import TopPage from './pages/TopPage/TopPage';
 import BookDetails from './pages/BookDetails/BookDetails';
 import ReviewPage from './pages/ReviewPage/ReviewPage';
 import PostPage from './pages/PostPage/PostPage';
-
-import StoreStep1 from './pages/BookStore/StoreStep1';
-import StoreStep2 from './pages/BookStore/StoreStep2';
-import StoreStep3 from './pages/BookStore/StoreStep3';
-import StoreStep4 from './pages/BookStore/StoreStep4';
+import BookStore from './pages/BookStore/BookStore';
 
 function App() {
   return (
@@ -27,10 +23,7 @@ function App() {
           <Route path="/post" element={<PostPage />}>
             <Route path=":postId" element={<PostPage />} />
           </Route>
-          <Route path="/step1" element={<StoreStep1 />} />
-          <Route path="/step2" element={<StoreStep2 />} />
-          <Route path="/step3" element={<StoreStep3 />} />
-          <Route path="/step4" element={<StoreStep4 />} />
+          <Route path="/store" element={<BookStore/>} />
         </Routes>
       </BrowserRouter>
     </Provider>
