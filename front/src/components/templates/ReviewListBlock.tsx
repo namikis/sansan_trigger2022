@@ -22,11 +22,13 @@ const ReviewListBlock = ({bookId, maxCardNum, star, numReviews}: ReviewListBlock
   });
   return (
     <div>
-      <div className="my-2 p-2 border-2 border-yellow-500 border-opacity-80 bg-yellow-50 rounded">
-        <SubTitle title="プレミアムユーザーのレビュー" />
-        <Link to={`/review/${bookId}`}><SmallText text={`${premiumReviews.length}件`} color='border-gray-700'/></Link>
-        <ReviewList bookId={bookId} reviews={premiumReviews} maxCardNum={maxCardNum} />   
-      </div>
+      {premiumReviews.length > 0 &&
+        <div className="my-2 p-2 border-2 border-yellow-500 border-opacity-80 bg-yellow-50 rounded">
+          <SubTitle title="プレミアムユーザーのレビュー" />
+          <Link to={`/review/${bookId}`}><SmallText text={`${premiumReviews.length}件`} color='border-gray-700'/></Link>
+          <ReviewList bookId={bookId} reviews={premiumReviews} maxCardNum={maxCardNum} />   
+        </div>
+      }
       <div className="my-2 py-2 border-t-2 border-gray-200 border-opacity-80">
         <SubTitle title="みんなのレビュー" />
         <ReactStars
