@@ -2,10 +2,10 @@ import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import store from './store/store';
-import TopPage from './pages/TopPage';
-import BookDetails from './pages/BookDetails';
-import ReviewPage from './pages/ReviewPage';
-import PostPage from './pages/PostPage';
+import TopPage from './pages/TopPage/TopPage';
+import BookDetails from './pages/BookDetails/BookDetails';
+import ReviewPage from './pages/ReviewPage/ReviewPage';
+import PostPage from './pages/PostPage/PostPage';
 
 import StoreStep1 from './pages/BookStore/StoreStep1';
 import StoreStep2 from './pages/BookStore/StoreStep2';

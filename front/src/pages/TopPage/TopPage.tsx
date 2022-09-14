@@ -1,14 +1,14 @@
 import React from 'react';
-import AppHeader from '../components/layouts/AppHeader';
-import BookList from '../components/templates/TopPage/BookList';
+import AppHeader from '../../components/layouts/AppHeader';
+import BookList from '../../components/templates/TopPage/BookList';
 import banner from '../assets/images/banner.png';
 
 
-import MainTitle from '../components/atoms/Title/MainTitle';
-import AppContainer from '../components/layouts/AppContainer';
-import MessageText from '../components/atoms/Text/MessageText';
-import BaseSearch from '../components/atoms/Search/BaseSearch';
-import SearchLottie from '../components/atoms/Lottie/SearchLottie';
+import MainTitle from '../../components/atoms/Title/MainTitle';
+import AppContainer from '../../components/layouts/AppContainer';
+import MessageText from '../../components/atoms/Text/MessageText';
+import BaseSearch from '../../components/atoms/Search/BaseSearch';
+import SearchLottie from '../../components/atoms/Lottie/SearchLottie';
 
 const TopPage = () => {
   return (

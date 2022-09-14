@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
-import AppHeader from "../components/layouts/AppHeader";
-import MediumText from "../components/atoms/Text/MediumText";
-import BookDescription, {BookDescriptionPropsType} from "../components/templates/BookDescription/BookDescriptionBig";
+import AppHeader from "../../components/layouts/AppHeader";
+import MediumText from "../../components/atoms/Text/MediumText";
+import BookDescription, {BookDescriptionPropsType} from "../../components/templates/BookDescription/BookDescriptionBig";
 import { Link } from "react-router-dom";
-import ReviewListBlock from "../components/templates/BookReview/ReviewListBlock";
+import ReviewListBlock from "../../components/templates/BookReview/ReviewListBlock";
 
 const BookDetails = () => {
   const bookId = Number(useParams().postId);
