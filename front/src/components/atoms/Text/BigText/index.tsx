@@ -4,15 +4,14 @@ type BigTextPropsType = {
   text?: string;
   color?: string;
   margin?: boolean;
+  inlineBlock?: boolean
 }
 
-const BigText:React.FC<BigTextPropsType> = ({text="", color="", margin=true}) => {
+const BigText:React.FC<BigTextPropsType> = ({text="", color="", margin=true, inlineBlock=false}) => {
   return (
-    <>
-        <h2 className={`title-font text-xl font-medium ${color} ${margin && "mb-3"}`}>
-        {text ? text : "タイトル"}
-        </h2>
-    </>
+    <div className={`title-font text-xl font-medium ${color} ${margin && "mb-3"}`}>
+      {text ? text : "タイトル"}
+    </div>
   )
 }
 
