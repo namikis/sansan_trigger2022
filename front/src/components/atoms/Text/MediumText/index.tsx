@@ -1,13 +1,19 @@
+import { faL } from '@fortawesome/free-solid-svg-icons';
 import React from 'react'
 
-const index:React.FC<{text:string, color:string}> = ({text, color}) => {
+type MediumTextPropsType = {
+  text?: string;
+  color?: string;
+  margin?: boolean;
+  inlineBlock?: boolean;
+}
+
+const index:React.FC<MediumTextPropsType> = ({text="", color="", margin=true, inlineBlock=false}) => {
   return (
-    <>
-        <h1 className={`title-font text-xl font-medium ${color} mb-3`}>
-            {text ? text : "タイトル"}
-        </h1>
-    </>
-  )
+    <div className={`title-font text-xl font-medium ${color} ${margin && "mb-3"} ${inlineBlock && "inline-block"}`}>
+        {text ? text : "タイトル"}
+    </div>
+)
 }
 
 export default index

@@ -1,8 +1,7 @@
 package repository
 
 import (
-	"database/sql"
-
+	"github.com/jmoiron/sqlx"
 	"github.com/namikis/sansan_trigger2022/domain/entity"
 	"github.com/namikis/sansan_trigger2022/domain/repository"
 )
@@ -11,25 +10,71 @@ import (
 // これによりRepositoryがdomainに依存している
 
 type bookRepository struct {
-	Db *sql.DB
+	Db *sqlx.DB
 }
 
-func NewBookRepository(db *sql.DB) repository.BookRepository {
+func NewBookRepository(db *sqlx.DB) repository.BookRepository {
 	return bookRepository{
 		Db: db,
 	}
 }
-
 
 func (bu bookRepository) GetRandom() (entity.Book, error) {
 	// sqlとの接続
 	// jmoiron/sqlx
 
 	book := entity.Book{
-		Id: 1,
+		Id:    1,
 		Title: "book1",
 	}
 
 	return book, nil
 }
 
+func (bu bookRepository) GetCount() (int, error) {
+	//
+	// test
+	query := "SELECT COUNT(id) from books"
+	row := bu.Db.QueryRowx(query)
+	_num := 0
+	if err := row.Scan(&_num); err != nil {
+		return _num, err
+	}
+
+	return _num, nil
+}
+
+func (bu bookRepository) GetBookById(i int) (entity.Book, error) {
+	// sqlとの接続
+	// jmoiron/sqlx
+	query := "SELECT id,isbn,title,author,image_url from books where id = $1"
+
+	row := bu.Db.QueryRowx(query, i)
+
+	bk := entity.Book{}
+
+	if err := row.StructScan(&bk); err != nil { //結果をBook形式で自動で格納
+		return bk, err
+	}
+	return bk, nil
+}
+
+func (bu bookRepository) GetBooks(offset int) (entity.Booklist, error) {
+	// sqlとの接続
+	// jmoiron/sqlx
+	query := "SELECT id,isbn,title,author,image_url FROM books ORDER BY id LIMIT 100 OFFSET $1"
+	var booklist entity.Booklist
+	rows, err := bu.Db.Queryx(query, offset)
+	if err != nil {
+		return booklist, err
+	}
+
+	for rows.Next() {
+		var book entity.Book
+		if err := rows.StructScan(&book); err == nil { //結果をBook形式で自動で格納
+			booklist = append(booklist, book)
+		}
+	}
+
+	return booklist, nil
+}

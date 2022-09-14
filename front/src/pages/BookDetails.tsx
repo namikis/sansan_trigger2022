@@ -13,7 +13,7 @@ const BookDetails = () => {
   const publisher = "出版社出版社出版社";
   const date = new Date("2000/1/1");
   const description = "説明文説明文説明文説明文説明文説明文説明文";
-  const numReviews = 16;
+  const numReviews = 11;
 
   const bookDescriptionProps: BookDescriptionPropsType = {
     title,

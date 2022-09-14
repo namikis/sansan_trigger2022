@@ -1,9 +1,9 @@
-import BigText from "../atoms/Text/BigText";
 import MediumText from "../atoms/Text/MediumText";
 import SmallText from "../atoms/Text/SmallText";
 import BookImage from "../atoms/Image/BookImage";
 import ReactStars from "react-stars";
 import { Link } from "react-router-dom";
+import SubTitle from "../atoms/Title/SubTitle";
 
 export type BookDescriptionPropsType = {
   title: string;
@@ -31,21 +31,23 @@ const BookDescription = ({title, star, auther, publisher, date, description, num
           <div className="col-span-2">
             <BookImage />
           </div>
-          <div className="col-span-3 px-3">
-            <BigText text={title} />
-            <ReactStars
-              count={5}
-              value={star}
-              size={12}
-              edit={false}
-            />
-            <Link to={`/review/${bookId}`}><SmallText text={`${numReviews}件`} color='border-gray-700'/></Link>
-            <MediumText text={`著者：${auther}`} color='border-gray-700'/>
-            <MediumText text={`出版社：${publisher}`} color='border-gray-700'/>
-            <MediumText text={`出版日：${formatDate(date)}`} color='border-gray-700'/>
-            <div>
-              <MediumText text={"説明"} color='border-gray-700'/>
-              <SmallText text={description} color='border-gray-700'/>
+          <div className="col-span-3 pl-3">
+            <SubTitle title={title} />
+            <div className="my-2 py-2 border-t-2 border-gray-200 border-opacity-60">
+              <ReactStars
+                count={5}
+                value={star}
+                size={12}
+                edit={false}
+              />
+              <Link to={`/review/${bookId}`}><SmallText text={`${numReviews}件`} color='border-gray-700' margin={false} /></Link>
+              <MediumText text={`著者：${auther}`} color='border-gray-700' margin={false} />
+              <MediumText text={`出版社：${publisher}`} color='border-gray-700' margin={false} />
+              <MediumText text={`出版日：${formatDate(date)}`} color='border-gray-700' margin={false} />
+              <div>
+                <MediumText text={"説明"} color='border-gray-700' margin={false} />
+                <SmallText text={description} color='border-gray-700' margin={false} />
+              </div>
             </div>
           </div>
         </div>

@@ -1,30 +1,18 @@
-import ReviewCard from "../molecules/Card/ReviewCard";
-import {ReviewCardPropsType} from "../molecules/Card/ReviewCard/index";
+import ReviewCard, { ReviewCardPropsType } from "../molecules/Card/ReviewCard";
 
 type ReviewListPropsType = {
   bookId: number;
   maxCardNum: number;
+  reviews: ReviewCardPropsType[];
 };
 
-const ReviewList = ({bookId, maxCardNum}: ReviewListPropsType) => {
-  const title = "レビュータイトル";
-  const star = 3.5;
-  const userName = "user";
-  const text = "レビュー内容".repeat(30);
-  const reviewCardProps: ReviewCardPropsType = {
-    title,
-    star,
-    userName,
-    text
-  }
-  const reviewCardsProps = new Array<ReviewCardPropsType>(20).fill(reviewCardProps);
-
+const ReviewList = ({bookId, maxCardNum, reviews}: ReviewListPropsType) => {
   return (
     <section className="text-gray-600 body-font">
       <div className="container mx-auto">
         <div>
-          {reviewCardsProps.slice(0, maxCardNum).map((props, index) =>
-            <ReviewCard {...props} key={index}/>
+          {reviews.slice(0, maxCardNum).map((review, index) =>
+            <ReviewCard {...review} key={index}/>
           )}
         </div>
       </div>
