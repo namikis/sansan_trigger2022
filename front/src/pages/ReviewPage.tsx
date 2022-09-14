@@ -25,9 +25,11 @@ const ReviewPage = () => {
   return (
     <div>
       <Header isLogin={true} />
-      <div className="container mx-auto my-4 px-4">
-        <BookDescriptionSmall {...bookDescriptionProps} />
-        <ReviewListBlock bookId={bookId} maxCardNum={100} star={star} numReviews={numReviews} />
+        <div className="bg-gray-100">
+          <div className="bg-white lg:max-w-4xl md:max-w-2xl mx-auto my-4 px-4">
+          <BookDescriptionSmall {...bookDescriptionProps} />
+          <ReviewListBlock bookId={bookId} maxCardNum={100} star={star} numReviews={numReviews} />
+        </div>
       </div>
     </div>
   )

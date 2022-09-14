@@ -31,15 +31,17 @@ const BookDescriptionSmall = ({title, star, auther, publisher, date, numReviews,
             <BookImage />
           </div>
           <div className="col-span-4 px-3">
-            <SubTitle title={title} />
-            <div className="my-2 py-2 border-t-2 border-gray-200 border-opacity-60">
+            <div>
+              <SubTitle title={title} />
               <ReactStars
                 count={5}
                 value={star}
                 size={12}
                 edit={false}
               />
-              <Link to={`/review/${bookId}`}><SmallText text={`${numReviews}件`} color='border-gray-700' margin={false} /></Link>
+              <Link to={`/review/${bookId}`}><SmallText text={`${numReviews}件`} color='text-blue-700' margin={false} /></Link>
+            </div>
+            <div className="my-2 py-2 border-t-2 border-gray-200 border-opacity-60">
               <MediumText text={`著者：${auther}`} color='border-gray-700' margin={false} />
               <MediumText text={`出版社：${publisher}`} color='border-gray-700' margin={false} />
               <MediumText text={`出版日：${formatDate(date)}`} color='border-gray-700' margin={false} />

@@ -25,7 +25,7 @@ const ReviewListBlock = ({bookId, maxCardNum, star, numReviews}: ReviewListBlock
       {premiumReviews.length > 0 &&
         <div className="my-2 p-2 border-2 border-yellow-500 border-opacity-80 bg-yellow-50 rounded">
           <SubTitle title="プレミアムユーザーのレビュー" />
-          <Link to={`/review/${bookId}`}><SmallText text={`${premiumReviews.length}件`} color='border-gray-700' margin={false} /></Link>
+          <Link to={`/review/${bookId}`}><SmallText text={`${premiumReviews.length}件`} color='text-blue-700' margin={false} /></Link>
           <ReviewList bookId={bookId} reviews={premiumReviews} maxCardNum={maxCardNum} />   
         </div>
       }
@@ -37,8 +37,8 @@ const ReviewListBlock = ({bookId, maxCardNum, star, numReviews}: ReviewListBlock
           size={12}
           edit={false}
         />
-        <Link to={`/review/${bookId}`}><SmallText text={`${generalReviews.length}件`} color='border-gray-700' margin={false} /></Link>
-        <Link to={`/post/${bookId}`}><MediumText text="レビューを書く" color='border-gray-700' margin={false} /></Link>
+        <Link to={`/review/${bookId}`}><SmallText text={`${generalReviews.length}件`} color='text-blue-700' margin={false} /></Link>
+        <Link to={`/post/${bookId}`}><MediumText text="レビューを書く" color='text-blue-700' margin={false} /></Link>
         <ReviewList bookId={bookId} reviews={generalReviews} maxCardNum={maxCardNum} />   
       </div>
     </div>

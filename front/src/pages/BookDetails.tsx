@@ -29,10 +29,12 @@ const BookDetails = () => {
   return (
     <div>
       <Header isLogin={false} />
-      <div className="container mx-auto my-4 px-4">
-        <BookDescription {...bookDescriptionProps} />
-        <ReviewListBlock bookId={bookId} maxCardNum={3} star={star} numReviews={numReviews} />
-        <Link to={`/review/${bookId}`}><MediumText text="もっとレビューを見る" color='border-gray-700' /></Link>
+      <div className="bg-gray-100">
+        <div className="bg-white lg:max-w-4xl md:max-w-2xl mx-auto my-4 px-4">
+          <BookDescription {...bookDescriptionProps} />
+          <ReviewListBlock bookId={bookId} maxCardNum={3} star={star} numReviews={numReviews} />
+          <Link to={`/review/${bookId}`}><MediumText text="もっとレビューを見る" color='text-blue-700' /></Link>
+        </div>
       </div>
     </div>
   );
