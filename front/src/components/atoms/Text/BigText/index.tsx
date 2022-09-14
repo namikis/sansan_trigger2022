@@ -1,13 +1,18 @@
 import React from 'react'
 
-const BigText:React.FC<{text:string}> = ({text}) => {
+type BigTextPropsType = {
+  text?: string;
+  color?: string;
+  margin?: boolean;
+  inlineBlock?: boolean
+}
+
+const BigText:React.FC<BigTextPropsType> = ({text="", color="", margin=true, inlineBlock=false}) => {
   return (
-    <>
-        <h2 className="title-font text-xl font-medium text-black mb-3">
-        {text ? text : "タイトル"}
-        </h2>
-    </>
+    <div className={`title-font text-xl font-medium ${color} ${margin && "mb-3"}`}>
+      {text ? text : "タイトル"}
+    </div>
   )
 }
 
-export default BigText
+export default BigText;

@@ -40,13 +40,13 @@ const BookDescription = ({title, star, auther, publisher, date, description, num
                 size={12}
                 edit={false}
               />
-              <Link to={`/review/${bookId}`}><SmallText text={`${numReviews}件`} color='border-gray-700'/></Link>
-              <MediumText text={`著者：${auther}`} color='border-gray-700'/>
-              <MediumText text={`出版社：${publisher}`} color='border-gray-700'/>
-              <MediumText text={`出版日：${formatDate(date)}`} color='border-gray-700'/>
+              <Link to={`/review/${bookId}`}><SmallText text={`${numReviews}件`} color='border-gray-700' margin={false} /></Link>
+              <MediumText text={`著者：${auther}`} color='border-gray-700' margin={false} />
+              <MediumText text={`出版社：${publisher}`} color='border-gray-700' margin={false} />
+              <MediumText text={`出版日：${formatDate(date)}`} color='border-gray-700' margin={false} />
               <div>
-                <MediumText text={"説明"} color='border-gray-700'/>
-                <SmallText text={description} color='border-gray-700'/>
+                <MediumText text={"説明"} color='border-gray-700' margin={false} />
+                <SmallText text={description} color='border-gray-700' margin={false} />
               </div>
             </div>
           </div>
