@@ -9,7 +9,7 @@ const index:React.FC<{index:number}> = ({index}) => {
   return (
     <div className="p-2 lg:w-1/4 md:w-1/3 my-2">
         <Link to={`/book/${index}`}>
-        <div className="h-full bg-brown-base rounded-lg overflow-hidden shadow-lg">
+        <div className="h-full bg-brown-base hover:bg-brown-base-shadow rounded-lg overflow-hidden shadow-lg">
             <BookImage />
             <div className='border border-gray-200 my-1 mx-1'></div>
             <div className="p-6 bg-brown-llight">
