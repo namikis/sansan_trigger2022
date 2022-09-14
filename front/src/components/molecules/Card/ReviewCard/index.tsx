@@ -23,7 +23,7 @@ const ReviewCard = ({title, star, userName, text, premium}: ReviewCardPropsType)
               edit={false}
             />
             <SmallText text={`投稿者：${userName}`} color='border-gray-700'/>
-            <MediumText text={premium} color='text-red-700' />
+            {premium && <MediumText text={premium} color='text-red-700' />}
             <MediumText text={text} color='border-gray-700'/>
         </div>
     </div>
