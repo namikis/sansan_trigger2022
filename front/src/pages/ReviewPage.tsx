@@ -10,7 +10,7 @@ const ReviewPage = () => {
   const auther = "著者名著者名";
   const publisher = "出版社出版社出版社";
   const date = new Date("2000/1/1");
-  const numReviews = 16;
+  const numReviews = 11;
 
   const bookDescriptionProps: BookDescriptionSmallPropsType = {
     title,
