@@ -1,6 +1,6 @@
-import BookCard from "../molecules/Card/BookCard"
+import BookCard from "../../molecules/Card/BookCard"
 
-import SubTitle from "../atoms/Title/SubTitle";
+import SubTitle from "../../atoms/Title/SubTitle";
 
 const BookList = () => {
   return (

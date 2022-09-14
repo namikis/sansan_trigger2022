@@ -8,7 +8,7 @@ type MediumTextPropsType = {
   inlineBlock?: boolean;
 }
 
-const index:React.FC<MediumTextPropsType> = ({text="", color="", margin=true, inlineBlock=false}) => {
+const MediumText:React.FC<MediumTextPropsType> = ({text="", color="", margin=true, inlineBlock=false}) => {
   return (
     <div className={`title-font text-xl font-medium ${color} ${margin && "mb-3"} ${inlineBlock && "inline-block"}`}>
         {text ? text : "タイトル"}
@@ -16,4 +16,4 @@ const index:React.FC<MediumTextPropsType> = ({text="", color="", margin=true, in
 )
 }
 
-export default index
+export default MediumText

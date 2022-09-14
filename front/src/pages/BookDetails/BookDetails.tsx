@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
-import Header from "../components/layouts/Header";
-import MediumText from "../components/atoms/Text/MediumText";
-import BookDescription, {BookDescriptionPropsType} from "../components/templates/BookDescriptionBig";
+import AppHeader from "../../components/layouts/AppHeader";
+import MediumText from "../../components/atoms/Text/MediumText";
+import BookDescription, {BookDescriptionPropsType} from "../../components/templates/BookDescription/BookDescriptionBig";
 import { Link } from "react-router-dom";
-import ReviewListBlock from "../components/templates/ReviewListBlock";
+import ReviewListBlock from "../../components/templates/BookReview/ReviewListBlock";
 
 const BookDetails = () => {
   const bookId = Number(useParams().postId);
@@ -28,7 +28,7 @@ const BookDetails = () => {
 
   return (
     <div>
-      <Header isLogin={false} />
+      <AppHeader isLogin={false} />
       <div className="container mx-auto my-4 px-4">
         <BookDescription {...bookDescriptionProps} />
         <ReviewListBlock bookId={bookId} maxCardNum={3} star={star} numReviews={numReviews} />

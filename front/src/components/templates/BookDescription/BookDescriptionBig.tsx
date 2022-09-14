@@ -1,9 +1,9 @@
-import MediumText from "../atoms/Text/MediumText";
-import SmallText from "../atoms/Text/SmallText";
-import BookImage from "../atoms/Image/BookImage";
+import MediumText from "../../atoms/Text/MediumText";
+import SmallText from "../../atoms/Text/SmallText";
+import BookImage from "../../atoms/Image/BookImage";
 import ReactStars from "react-stars";
 import { Link } from "react-router-dom";
-import SubTitle from "../atoms/Title/SubTitle";
+import SubTitle from "../../atoms/Title/SubTitle";
 
 export type BookDescriptionPropsType = {
   title: string;

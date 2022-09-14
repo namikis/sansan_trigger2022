@@ -1,19 +1,19 @@
 import React from 'react';
-import Header from '../components/layouts/Header';
-import BookList from '../components/templates/BookList';
+import AppHeader from '../../components/layouts/AppHeader';
+import BookList from '../../components/templates/TopPage/BookList';
 import banner from '../assets/images/banner.png';
 
 
-import MainTitle from '../components/atoms/Title/MainTitle';
-import AppContainer from '../components/layouts/AppContainer';
-import MessageText from '../components/atoms/Text/MessageText';
-import BaseSearch from '../components/atoms/Search/BaseSearch';
-import SearchLottie from '../components/atoms/Lottie/SearchLottie';
+import MainTitle from '../../components/atoms/Title/MainTitle';
+import AppContainer from '../../components/layouts/AppContainer';
+import MessageText from '../../components/atoms/Text/MessageText';
+import BaseSearch from '../../components/atoms/Search/BaseSearch';
+import SearchLottie from '../../components/atoms/Lottie/SearchLottie';
 
 const TopPage = () => {
   return (
     <div>
-      <Header isLogin={false} />
+      <AppHeader isLogin={false} />
   
       <div className='bg-brown-light py-12'>
         <AppContainer>
@@ -22,7 +22,7 @@ const TopPage = () => {
               <SearchLottie />
             </div>
             <div className='m-auto text-center'>
-              <MainTitle title='hogehogehogehoge'/>
+              <MainTitle title='hogehogehogehoge' color='text-gray-200'/>
               <MessageText text='fugafuga, fugafu, fugagaga' color='text-gray-200'/>
               <div className='py-8'></div>
               <BaseSearch />

@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import ReactStars from "react-stars";
-import MediumText from "../atoms/Text/MediumText";
-import SmallText from "../atoms/Text/SmallText";
+import MediumText from "../../atoms/Text/MediumText";
+import SmallText from "../../atoms/Text/SmallText";
 import ReviewList from "./ReviewList";
-import reviewsJson from "../../jsons/reviews.json";
-import SubTitle from "../atoms/Title/SubTitle";
+import reviewsJson from "../../../assets/data/jsons/reviews.json";
+import SubTitle from "../../atoms/Title/SubTitle";
 
 type ReviewListBlockPropsType = {
   bookId: number;

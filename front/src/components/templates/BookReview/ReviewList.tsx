@@ -1,4 +1,4 @@
-import ReviewCard, { ReviewCardPropsType } from "../molecules/Card/ReviewCard";
+import ReviewCard, { ReviewCardPropsType } from "../../molecules/Card/ReviewCard";
 
 type ReviewListPropsType = {
   bookId: number;
