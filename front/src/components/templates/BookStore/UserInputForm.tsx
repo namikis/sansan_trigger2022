@@ -12,7 +12,7 @@ const UserInfoForm = () => {
         <form action="" className=''>
           <DefaultInput label='氏名' placeholder='フルネーム'/>
           <DefaultInput label='住所' placeholder='住所'/>
-          <DefaultInput label='電話番号' placeholder='-(ハイフン)あり'/>
+          <DefaultInput label='電話番号' placeholder='ハイフンあり'/>
           <DefaultInput label='メールアドレス' placeholder='メールアドレス'/>
 
           <div className="mb-10"></div>
