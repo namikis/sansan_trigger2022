@@ -20,9 +20,20 @@ const TopPage = () => {
               <SearchLottie />
             </div>
             <div className='m-auto text-center'>
-              <MainTitle title='hogehogehogehoge' color='text-gray-200'/>
-              <MessageText text='fugafuga, fugafu, fugagaga' color='text-gray-200'/>
-              <div className='py-8'></div>
+              <p className='text-gray-200 text-5xl font-bold'>
+                技術書を <br/>
+                <div className='mb-3'></div>
+                読もう、見つけよう、<br />
+                <div className='mb-3'></div>
+                借りよう、預けよう。
+              </p>
+              <div className='mb-12'></div>
+              <p className='text-gray-200 text-lg font-light'>
+                技術書.comでは技術書に関わる様々なサービスを利用できます。
+                <div className='mb-1'></div>
+                まずは下の検索窓から、気になる単語を入力して 技術書を探してみましょう。
+              </p>
+              <div className='py-4'></div>
               <BaseSearch />
             </div>
           </div>
