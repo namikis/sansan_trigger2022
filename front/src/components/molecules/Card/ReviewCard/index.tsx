@@ -7,9 +7,10 @@ export type ReviewCardPropsType = {
   star: number;
   userName: string;
   text: string;
+  premium: string;
 }
 
-const ReviewCard = ({title, star, userName, text}: ReviewCardPropsType) => {
+const ReviewCard = ({title, star, userName, text, premium}: ReviewCardPropsType) => {
 
   return (
     <div className="h-full border-t-2 border-gray-200 border-opacity-60 overflow-hidden">
@@ -22,6 +23,7 @@ const ReviewCard = ({title, star, userName, text}: ReviewCardPropsType) => {
               edit={false}
             />
             <SmallText text={`投稿者：${userName}`} color='border-gray-700'/>
+            <MediumText text={premium} color='text-red-700' />
             <MediumText text={text} color='border-gray-700'/>
         </div>
     </div>
