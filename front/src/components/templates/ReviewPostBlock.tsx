@@ -19,6 +19,7 @@ const ReviewPostBlock = ({bookId}: ReviewPostBlockPropsType) => {
           count={5}
           value={0}
           size={48}
+          half={false}
         />
       </div>
       <div className="my-2 py-2 border-t-2 border-gray-200 border-opacity-80">
