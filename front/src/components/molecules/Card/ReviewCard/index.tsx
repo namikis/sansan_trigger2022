@@ -1,6 +1,5 @@
 import ReactStars from "react-stars";
-import MediumText from "../../../atoms/Text/MediumText"
-import SmallText from "../../../atoms/Text/SmallText"
+import GradeText from "../../../atoms/Text/GradeText";
 
 export type ReviewCardPropsType = {
   title: string;
@@ -15,7 +14,7 @@ const ReviewCard = ({title, star, userName, text, premium}: ReviewCardPropsType)
   return (
     <div className="h-full border-t-2 border-gray-200 border-opacity-60 overflow-hidden">
         <div className="">
-            <MediumText text={title} color='border-gray-700' margin={false} />
+            <GradeText text={title} grade={3} />
             <ReactStars
               count={5}
               value={star}
@@ -23,11 +22,11 @@ const ReviewCard = ({title, star, userName, text, premium}: ReviewCardPropsType)
               edit={false}
             />
             {premium
-              ? <MediumText text={`投稿者：${userName}`} color='text-blue-900' margin={false} />
-              : <SmallText text={`投稿者：${userName}`} color='text-gray-700' margin={false} />
+              ? <GradeText text={`投稿者：${userName}`} color='text-blue-900' grade={3} />
+              : <GradeText text={`投稿者：${userName}`} color='text-gray-700' grade={1} />
             }
-            {premium && <MediumText text={premium} color='text-red-700' margin={false} />}
-            <MediumText text={text} color='border-gray-700' margin={false} />
+            {premium && <GradeText text={premium} color='text-red-700' grade={3} />}
+            <GradeText text={text} grade={2} />
         </div>
     </div>
   )

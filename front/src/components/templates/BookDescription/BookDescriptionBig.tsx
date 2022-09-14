@@ -1,9 +1,7 @@
-import MediumText from "../../atoms/Text/MediumText";
-import SmallText from "../../atoms/Text/SmallText";
 import BookImage from "../../atoms/Image/BookImage";
 import ReactStars from "react-stars";
 import { Link } from "react-router-dom";
-import SubTitle from "../../atoms/Title/SubTitle";
+import GradeText from "../../atoms/Text/GradeText";
 
 export type BookDescriptionPropsType = {
   title: string;
@@ -32,21 +30,23 @@ const BookDescription = ({title, star, auther, publisher, date, description, num
             <BookImage />
           </div>
           <div className="col-span-3 pl-3">
-            <SubTitle title={title} />
-            <div className="my-2 py-2 border-t-2 border-gray-200 border-opacity-60">
+            <div className="my-2">
+              <GradeText text={title} grade={4} />
               <ReactStars
                 count={5}
                 value={star}
                 size={12}
                 edit={false}
               />
-              <Link to={`/review/${bookId}`}><SmallText text={`${numReviews}件`} color='border-gray-700' margin={false} /></Link>
-              <MediumText text={`著者：${auther}`} color='border-gray-700' margin={false} />
-              <MediumText text={`出版社：${publisher}`} color='border-gray-700' margin={false} />
-              <MediumText text={`出版日：${formatDate(date)}`} color='border-gray-700' margin={false} />
+              <Link to={`/review/${bookId}`}><GradeText text={`${numReviews}件`} grade={1} /></Link>
+            </div>
+            <div className="my-2 py-2 border-t-2 border-gray-200 border-opacity-60">
+              <GradeText text={`著者：${auther}`} grade={3} inlineBlock={false} />
+              <GradeText text={`出版社：${publisher}`} grade={3} inlineBlock={false} />
+              <GradeText text={`出版日：${formatDate(date)}`} grade={3} inlineBlock={false} />
               <div>
-                <MediumText text={"説明"} color='border-gray-700' margin={false} />
-                <SmallText text={description} color='border-gray-700' margin={false} />
+                <GradeText text={"説明"} grade={3} />
+                <GradeText text={description} grade={2} />
               </div>
             </div>
           </div>

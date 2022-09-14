@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
 import ReactStars from "react-stars";
-import MediumText from "../../atoms/Text/MediumText";
-import SmallText from "../../atoms/Text/SmallText";
 import ReviewList from "./ReviewList";
 import reviewsJson from "../../../assets/data/jsons/reviews.json";
-import SubTitle from "../../atoms/Title/SubTitle";
+import GradeText from "../../atoms/Text/GradeText";
 
 type ReviewListBlockPropsType = {
   bookId: number;
@@ -24,21 +22,21 @@ const ReviewListBlock = ({bookId, maxCardNum, star, numReviews}: ReviewListBlock
     <div>
       {premiumReviews.length > 0 &&
         <div className="my-2 p-2 border-2 border-yellow-500 border-opacity-80 bg-yellow-50 rounded">
-          <SubTitle title="プレミアムユーザーのレビュー" />
-          <Link to={`/review/${bookId}`}><SmallText text={`${premiumReviews.length}件`} color='border-gray-700' margin={false} /></Link>
+          <GradeText text="プレミアムユーザーのレビュー" grade={4} />
+          <Link to={`/review/${bookId}`}><GradeText text={`${premiumReviews.length}件`} color='text-blue-700' grade={1} /></Link>
           <ReviewList bookId={bookId} reviews={premiumReviews} maxCardNum={maxCardNum} />   
         </div>
       }
       <div className="my-2 py-2 border-t-2 border-gray-200 border-opacity-80">
-        <SubTitle title="みんなのレビュー" />
+        <GradeText text="みんなのレビュー" grade={4} />
         <ReactStars
           count={5}
           value={star}
           size={12}
           edit={false}
         />
-        <Link to={`/review/${bookId}`}><SmallText text={`${generalReviews.length}件`} color='border-gray-700' margin={false} /></Link>
-        <Link to={`/post/${bookId}`}><MediumText text="レビューを書く" color='border-gray-700' margin={false} /></Link>
+        <Link to={`/review/${bookId}`}><GradeText text={`${generalReviews.length}件`} color='text-blue-700' grade={1} /></Link>
+        <Link to={`/post/${bookId}`}><GradeText text="レビューを書く" color='text-blue-700' grade={3} /></Link>
         <ReviewList bookId={bookId} reviews={generalReviews} maxCardNum={maxCardNum} />   
       </div>
     </div>
