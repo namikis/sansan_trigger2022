@@ -9,7 +9,7 @@ type SmallTextPropsType = {
 
 const SmallText:React.FC<SmallTextPropsType> = ({text="", color="", margin=true, inlineBlock=false}) => {
   return (
-    <div className={`tracking-widest title-font font${color} ${margin && "mb-1"} ${inlineBlock && "inline-block"}`}>
+    <div className={`tracking-widest title-font ${color} ${margin && "mb-1"} ${inlineBlock && "inline-block"}`}>
       {text ? text : "タイトル"}
     </div>
   )
