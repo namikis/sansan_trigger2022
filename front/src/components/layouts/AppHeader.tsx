@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import headerImg from "../../assets/images/header.png";
 
 type AppHeaderPropsType = {
-  isLogin: Boolean
+  isLogin?: Boolean
 };
 
 const AppHeader = ({isLogin}: AppHeaderPropsType) => {

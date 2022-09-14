@@ -29,13 +29,16 @@ const BookDetails = () => {
   return (
     <div>
       <AppHeader isLogin={false} />
-      <div className="bg-gray-100">
-        <div className="bg-white lg:max-w-4xl md:max-w-2xl mx-auto my-4 px-4">
           <BookDescription {...bookDescriptionProps} />
           <ReviewListBlock bookId={bookId} maxCardNum={3} star={star} numReviews={numReviews} />
-          <Link to={`/review/${bookId}`}><GradeText text="もっとレビューを見る" grade={3} /></Link>
-        </div>
-      </div>
+
+          <div className="my-8 py-8 mx-auto flex justify-center">
+            <Link to={`/review/${bookId}`}>
+              <div className="bg-brown-base w-48 py-2 rounded hover:bg-brown-base-shadow ">
+                <p className="text-center text-white text-lg ">もっとレビューを見る</p>
+              </div>
+            </Link>
+          </div>
     </div>
   );
 };

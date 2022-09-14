@@ -12,8 +12,9 @@ export type ReviewCardPropsType = {
 const ReviewCard = ({title, star, userName, text, premium}: ReviewCardPropsType) => {
 
   return (
-    <div className="h-full border-t-2 border-gray-200 border-opacity-60 overflow-hidden">
+    <div className="h-full border-t-2 border-gray-200 border-opacity-60 overflow-hidden my-8">
         <div className="">
+            <div className="mt-4"></div>
             <GradeText text={title} grade={3} />
             <ReactStars
               count={5}

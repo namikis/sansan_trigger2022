@@ -7,6 +7,7 @@ import BookDetails from './pages/BookDetails/BookDetails';
 import ReviewPage from './pages/ReviewPage/ReviewPage';
 import PostPage from './pages/PostPage/PostPage';
 import BookStore from './pages/BookStore/BookStore';
+import BookRental from './pages/BookRental/BookRental';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Routes>
           <Route index element={<TopPage />} />
           <Route path="/book" element={<BookDetails />}>
-            <Route path=":postId" element={<BookDetails />} />
+            <Route path=":postId" element={<BookDetails />}/>
           </Route>
           <Route path="/review" element={<ReviewPage />}>
             <Route path=":postId" element={<ReviewPage />} />
@@ -24,6 +25,7 @@ function App() {
             <Route path=":postId" element={<PostPage />} />
           </Route>
           <Route path="/store" element={<BookStore/>} />
+          <Route path="/rental" element={<BookRental/>} />
         </Routes>
       </BrowserRouter>
     </Provider>
