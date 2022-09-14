@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from "react-router-dom";
 import ReactStars from "react-stars";
 import Input from "../atoms/Input";
@@ -10,6 +11,11 @@ type ReviewPostBlockPropsType = {
 };
 
 const ReviewPostBlock = ({bookId}: ReviewPostBlockPropsType) => {
+  const [value, setValue] = useState("");
+  const onChange = () => {
+    setValue(value);
+  }
+
   return (
     <div className="my-2 py-2 border-t-2 border-gray-200 border-opacity-80">
       <SubTitle title="この本をレビュー" />

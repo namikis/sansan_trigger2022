@@ -1,9 +1,9 @@
 type TextAreaPropsType = {
-  rows: number;
-  placeholder: string;
+  rows?: number;
+  placeholder?: string;
 };
 
-const TextArea = ({rows, placeholder}: TextAreaPropsType) => {
+const TextArea = ({rows=8, placeholder="placeholder"}: TextAreaPropsType) => {
   return (
     <>
         <textarea rows={rows}
