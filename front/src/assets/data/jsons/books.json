@@ -1,0 +1,134 @@
+[
+  {
+      "title": "リーダブルコード",
+      "description": "より良いコードを書くためのシンプルで実践的なテクニック (Theory in practice)",
+      "imgUrl": "https://images-fe.ssl-images-amazon.com/images/I/51MgH8Jmr3L._SL160_.jpg"
+  },
+  {
+    "title": "Deep Learning",
+    "description": "Pythonで学ぶディープラーニングの理論と実装",
+    "imgUrl": "https://images-fe.ssl-images-amazon.com/images/I/512ru2i5gyL._SL160_.jpg"
+  },
+  {
+    "title": "プロを目指す人のためのRuby入門",
+    "description": "言語仕様からテスト駆動開発・デバッグ技法まで",
+    "imgUrl": "https://images-fe.ssl-images-amazon.com/images/I/51nY-YLt2ZL._SL160_.jpg"
+  },
+  {
+    "title": "徹底攻略 AWS認定",
+    "description": "ソリューションアーキテクト  アソシエイト教科書",
+    "imgUrl": "https://images-fe.ssl-images-amazon.com/images/I/51ODtT%2BwepL._SL160_.jpg"
+  },
+  {
+    "title": "Java言語で学ぶデザインパターン入門",
+    "description": "増補改訂版 Java言語で学ぶデザインパターン入門",
+    "imgUrl": "https://images-fe.ssl-images-amazon.com/images/I/41mh5r0NwLL._SL160_.jpg"
+  },
+  {
+    "title": "AWS認定ソリューションアーキテクト",
+    "description": "合格対策 AWS認定ソリューションアーキテクト - アソシエイト",
+    "imgUrl": "https://images-fe.ssl-images-amazon.com/images/I/51uTIvkpfiL._SL160_.jpg"
+  },
+  {
+      "title": "基礎からのネットワーク＆サーバー構築",
+      "description": "Amazon Web Services 基礎からのネットワーク＆サーバー構築 改訂版",
+      "imgUrl": "https://images-fe.ssl-images-amazon.com/images/I/51AqPb3-deL._SL160_.jpg"
+  },
+  {
+    "title": "基礎から学ぶ Vue.js",
+    "description": "基礎から学ぶ Vue.js",
+    "imgUrl": "https://images-fe.ssl-images-amazon.com/images/I/51ubefW-ZSL._SL160_.jpg"
+  },
+
+  {
+    "title": "ゼロから作るDeep Learning ❷",
+    "description": "ゼロから作るDeep Learning ❷ ―自然言語処理編",
+    "imgUrl": "https://images-fe.ssl-images-amazon.com/images/I/51LL5Qn8nML._SL160_.jpg"
+  },
+  {
+    "title": "エリック・エヴァンスのドメイン駆動設計",
+    "description": "エリック・エヴァンスのドメイン駆動設計 (IT Architects'Archive ソフトウェア開発の実践)",
+    "imgUrl": "https://images-fe.ssl-images-amazon.com/images/I/51rgnUkmlzL._SL160_.jpg"
+  },
+  {
+    "title": "退屈なことはPythonにやらせよう",
+    "description": "退屈なことはPythonにやらせよう ―ノンプログラマーにもできる自動化処理プログラミング",
+    "imgUrl": "https://images-fe.ssl-images-amazon.com/images/I/51hk%2B5bKNrL._SL160_.jpg"
+  },
+  {
+    "title": "バーチャルリアリティ学",
+    "description": "バーチャルリアリティ学",
+    "imgUrl": "https://images-fe.ssl-images-amazon.com/images/I/61z18TtB0LL._SL160_.jpg"
+  },
+  {
+    "title": "実践コンテナ開発入門",
+    "description": "Docker/Kubernetes 実践コンテナ開発入門",
+    "imgUrl": "https://images-fe.ssl-images-amazon.com/images/I/51d69eJQMyL._SL160_.jpg"
+  },
+  {
+    "title": "リーダブルコード",
+    "description": "より良いコードを書くためのシンプルで実践的なテクニック (Theory in practice)",
+    "imgUrl": "https://images-fe.ssl-images-amazon.com/images/I/51MgH8Jmr3L._SL160_.jpg"
+  },
+  {
+    "title": "Deep Learning",
+    "description": "Pythonで学ぶディープラーニングの理論と実装",
+    "imgUrl": "https://images-fe.ssl-images-amazon.com/images/I/512ru2i5gyL._SL160_.jpg"
+  },
+  {
+    "title": "プロを目指す人のためのRuby入門",
+    "description": "言語仕様からテスト駆動開発・デバッグ技法まで",
+    "imgUrl": "https://images-fe.ssl-images-amazon.com/images/I/51nY-YLt2ZL._SL160_.jpg"
+  },
+  {
+    "title": "徹底攻略 AWS認定",
+    "description": "ソリューションアーキテクト  アソシエイト教科書",
+    "imgUrl": "https://images-fe.ssl-images-amazon.com/images/I/51ODtT%2BwepL._SL160_.jpg"
+  },
+  {
+    "title": "Java言語で学ぶデザインパターン入門",
+    "description": "増補改訂版 Java言語で学ぶデザインパターン入門",
+    "imgUrl": "https://images-fe.ssl-images-amazon.com/images/I/41mh5r0NwLL._SL160_.jpg"
+  },
+  {
+    "title": "AWS認定ソリューションアーキテクト",
+    "description": "合格対策 AWS認定ソリューションアーキテクト - アソシエイト",
+    "imgUrl": "https://images-fe.ssl-images-amazon.com/images/I/51uTIvkpfiL._SL160_.jpg"
+  },
+  {
+      "title": "基礎からのネットワーク＆サーバー構築",
+      "description": "Amazon Web Services 基礎からのネットワーク＆サーバー構築 改訂版",
+      "imgUrl": "https://images-fe.ssl-images-amazon.com/images/I/51AqPb3-deL._SL160_.jpg"
+  },
+  {
+    "title": "基礎から学ぶ Vue.js",
+    "description": "基礎から学ぶ Vue.js",
+    "imgUrl": "https://images-fe.ssl-images-amazon.com/images/I/51ubefW-ZSL._SL160_.jpg"
+  },
+
+  {
+    "title": "ゼロから作るDeep Learning ❷",
+    "description": "ゼロから作るDeep Learning ❷ ―自然言語処理編",
+    "imgUrl": "https://images-fe.ssl-images-amazon.com/images/I/51LL5Qn8nML._SL160_.jpg"
+  },
+  {
+    "title": "エリック・エヴァンスのドメイン駆動設計",
+    "description": "エリック・エヴァンスのドメイン駆動設計 (IT Architects'Archive ソフトウェア開発の実践)",
+    "imgUrl": "https://images-fe.ssl-images-amazon.com/images/I/51rgnUkmlzL._SL160_.jpg"
+  },
+  {
+    "title": "退屈なことはPythonにやらせよう",
+    "description": "退屈なことはPythonにやらせよう ―ノンプログラマーにもできる自動化処理プログラミング",
+    "imgUrl": "https://images-fe.ssl-images-amazon.com/images/I/51hk%2B5bKNrL._SL160_.jpg"
+  },
+  {
+    "title": "バーチャルリアリティ学",
+    "description": "バーチャルリアリティ学",
+    "imgUrl": "https://images-fe.ssl-images-amazon.com/images/I/61z18TtB0LL._SL160_.jpg"
+  },
+  {
+    "title": "実践コンテナ開発入門",
+    "description": "Docker/Kubernetes 実践コンテナ開発入門",
+    "imgUrl": "https://images-fe.ssl-images-amazon.com/images/I/51d69eJQMyL._SL160_.jpg"
+  }
+]
