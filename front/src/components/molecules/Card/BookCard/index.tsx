@@ -11,7 +11,7 @@ type bookType = {
   imgUrl:string;
 }
 
-const index:React.FC<{index:number,book:bookType}> = ({index,book}) => {
+const BookCard:React.FC<{index:number,book:bookType}> = ({index,book}) => {
   return (
     <div className="p-2 lg:w-1/4 md:w-1/3 my-2">
         <Link to={`/book/${index}`}>
@@ -28,4 +28,4 @@ const index:React.FC<{index:number,book:bookType}> = ({index,book}) => {
   )
 }
 
-export default index
+export default BookCard

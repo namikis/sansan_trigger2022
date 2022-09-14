@@ -25,12 +25,8 @@ const PostPage = () => {
   return (
     <div>
       <AppHeader isLogin={true} />
-      <div className="bg-gray-100">
-        <div className="bg-white lg:max-w-4xl md:max-w-2xl mx-auto my-4 px-4">
-          <BookDescriptionSmall {...bookDescriptionProps} />
-          <ReviewPostBlock bookId={bookId} />
-        </div>
-      </div>
+      <BookDescriptionSmall {...bookDescriptionProps} />
+      <ReviewPostBlock bookId={bookId} />
     </div>
   )
 }

@@ -6,11 +6,12 @@ import MainTitle from '../../atoms/Title/MainTitle';
 import SubTitle from '../../atoms/Title/SubTitle';
 
 import VerticalMargin from '../../atoms/Margin/VerticaMargin';
-import {storeStepType} from "../../../pages/BookStore/BookStore";
+import { rentalStepType } from '../../../pages/BookRental/BookRental';
+
 import appHeaderImg from "../../../assets/images/header.png"
 
 
-const CompleteStore:React.FC<storeStepType>= () => {
+const CompleteRental:React.FC<rentalStepType>= ({setNowPage}) => {
   return (
     <div className=" py-32 px-10">
       <div className="p-10 md:w-3/4 lg:w-1/2 mx-auto shadow-xl rounded-xl bg-white">
@@ -19,11 +20,11 @@ const CompleteStore:React.FC<storeStepType>= () => {
             <img src={appHeaderImg} alt="" />
           </div>
           <VerticalMargin y="8" />
-          <MainTitle title='応募完了'/>
+          <MainTitle title='申し込み完了'/>
           <VerticalMargin y="12" />
-          <SubTitle title='ご利用いただきありがとうございます'/>
+          <SubTitle title='ご利用いただきありがとうございます📚'/>
           <VerticalMargin y="4" />
-          <SubTitle title='識別番号 : 4FD49V'/>
+          <SubTitle title='技術書の到着予定 : 2022/9/31'/>
           <VerticalMargin y="12" />
           <Link to={"/"}>
             <DefaultButton text={"Topへ戻る"} color="bg-gray-400"/>
@@ -34,4 +35,4 @@ const CompleteStore:React.FC<storeStepType>= () => {
   )
 }
 
-export default CompleteStore
+export default CompleteRental

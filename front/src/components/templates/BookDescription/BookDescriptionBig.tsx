@@ -3,6 +3,10 @@ import ReactStars from "react-stars";
 import { Link } from "react-router-dom";
 import GradeText from "../../atoms/Text/GradeText";
 
+import AppContainer from "../../layouts/AppContainer";
+import MainTitle from "../../atoms/Title/MainTitle";
+import VerticalMargin from "../../atoms/Margin/VerticaMargin";
+
 export type BookDescriptionPropsType = {
   title: string;
   star: number;
@@ -23,7 +27,8 @@ const BookDescription = ({title, star, auther, publisher, date, description, num
   }
 
   return (
-    <section className="text-gray-600 body-font">
+    <section className="text-gray-600 body-font bg-gray-100">
+      <AppContainer>
       <div className="container px-0 py-6 mx-auto">
         <div className="grid grid-cols-5">
           <div className="col-span-2">
@@ -31,7 +36,8 @@ const BookDescription = ({title, star, auther, publisher, date, description, num
           </div>
           <div className="col-span-3 pl-3">
             <div className="my-2">
-              <GradeText text={title} grade={4} />
+              <MainTitle title={title} />
+              <VerticalMargin y="8" />
               <ReactStars
                 count={5}
                 value={star}
@@ -48,10 +54,18 @@ const BookDescription = ({title, star, auther, publisher, date, description, num
                 <GradeText text={"説明"} grade={3} />
                 <GradeText text={description} grade={2} />
               </div>
+              <div className="my-2">
+                <Link to={`/rental`}>
+                  <div className="bg-brown-base w-48 py-2 rounded hover:bg-brown-base-shadow ">
+                    <p className="text-center text-white text-lg ">この本を借りる</p>
+                  </div>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      </AppContainer>
     </section>
   )
 };

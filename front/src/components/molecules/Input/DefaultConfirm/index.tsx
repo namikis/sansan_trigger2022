@@ -1,6 +1,6 @@
 import React from 'react'
 
-const DefaultConfirm:React.FC<{label:string,value:string}> = ({label,value}) => {
+const DefaultConfirm:React.FC<{label:string,value?:string}> = ({label,value}) => {
   return (
     <div className="flex items-center mb-5">
       <label className="inline-block w-32 mr-12 text-right 
