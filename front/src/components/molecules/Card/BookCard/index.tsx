@@ -13,8 +13,8 @@ const index:React.FC<{index:number}> = ({index}) => {
             <BookImage />
             <div className='border border-gray-200 my-1 mx-1'></div>
             <div className="p-6 bg-brown-llight">
-                <MediumText text={"入門 Python3"} color='text-brown-dark'/>
-                <SmallText text={"sub sub sub"} color='text-brown-dark'/>
+                <MediumText text={"入門 Python3"} color='text-brown-dark' margin={false} />
+                <SmallText text={"sub sub sub"} color='text-brown-dark' margin={false} />
             </div>
         </div>
         </Link>

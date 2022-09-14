@@ -1,9 +1,15 @@
 import React from 'react'
 
-const index:React.FC<{text:string, color:string}> = ({text, color}) => {
+type MediumTextPropsType = {
+  text?: string;
+  color?: string;
+  margin?: boolean;
+}
+
+const index:React.FC<MediumTextPropsType> = ({text="", color="", margin=true}) => {
   return (
     <>
-        <h1 className={`title-font text-xl font-medium ${color} mb-3`}>
+        <h1 className={`title-font text-xl font-medium ${color} ${margin && "mb-3"}`}>
             {text ? text : "タイトル"}
         </h1>
     </>
