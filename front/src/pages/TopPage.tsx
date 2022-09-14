@@ -1,6 +1,6 @@
 import React from 'react';
 import AppHeader from '../components/layouts/AppHeader';
-import BookList from '../components/templates/BookList';
+import BookList from '../components/templates/TopPage/BookList';
 import banner from '../assets/images/banner.png';
 
 

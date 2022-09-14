@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import AppHeader from "../components/layouts/AppHeader";
-import BookDescriptionSmall, { BookDescriptionSmallPropsType } from "../components/templates/BookDescriptionSmall";
-import ReviewPostBlock from "../components/templates/ReviewPostBlock";
+import BookDescriptionSmall, { BookDescriptionSmallPropsType } from "../components/templates/BookDescription/BookDescriptionSmall";
+import ReviewPostBlock from "../components/templates/BookReview/ReviewPostBlock";
 
 const PostPage = () => {
   const bookId = Number(useParams().postId);
