@@ -1,8 +1,8 @@
 import React from 'react'
 
-const SubTitle:React.FC<{title:string}> = ({title}) => {
+const SubTitle:React.FC<{title?:string,color?:string}> = ({title="",color="text-gray-700"}) => {
   return (
-    <h1 className="text-3xl font-bold text-gray-700">
+    <h1 className={`text-xl font-base ${color}`}>
         {title}
     </h1>
   )

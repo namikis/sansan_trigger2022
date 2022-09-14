@@ -22,7 +22,7 @@ const TopPage = () => {
               <SearchLottie />
             </div>
             <div className='m-auto text-center'>
-              <MainTitle title='hogehogehogehoge'/>
+              <MainTitle title='hogehogehogehoge' color='text-gray-200'/>
               <MessageText text='fugafuga, fugafu, fugagaga' color='text-gray-200'/>
               <div className='py-8'></div>
               <BaseSearch />
