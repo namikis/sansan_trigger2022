@@ -2,9 +2,7 @@ import { Link } from "react-router-dom";
 import ReactStars from "react-stars";
 import Input from "../../atoms/Input";
 import GradeText from "../../atoms/Text/GradeText";
-import MediumText from "../../atoms/Text/MediumText";
 import TextArea from "../../atoms/TextArea";
-import SubTitle from "../../atoms/Title/SubTitle";
 
 type ReviewPostBlockPropsType = {
   bookId: number;

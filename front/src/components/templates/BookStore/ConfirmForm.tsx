@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-import DefaultInput from '../../molecules/Input/DefaultInput'
 import DefaultButton from '../../atoms/Button/DefaultButton'
 import DefaultConfirm from '../../molecules/Input/DefaultConfirm';
 

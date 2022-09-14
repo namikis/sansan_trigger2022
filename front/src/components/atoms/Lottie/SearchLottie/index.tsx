@@ -1,4 +1,3 @@
-import React from 'react'
 import Lottie from "lottie-react";
 import searchAnimation from "../../../../assets/lottie/65089-book-search.json";
 
