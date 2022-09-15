@@ -1,9 +1,27 @@
-import { useParams } from "react-router-dom";
+import React,{useRef,useEffect} from "react";
+import { useParams,Location, useLocation } from "react-router-dom";
 import AppHeader from "../../components/layouts/AppHeader";
 import BookDescription, {BookDescriptionPropsType} from "../../components/templates/BookDescription/BookDescriptionBig";
 import { Link } from "react-router-dom";
 import ReviewListBlock from "../../components/templates/BookReview/ReviewListBlock";
 import GradeText from "../../components/atoms/Text/GradeText";
+
+const useLocationChange = (callback: (location: Location) => void) => {
+  const refCallback = useRef<undefined | ((location: Location) => void)>()
+  const location = useLocation()
+
+  useEffect(() => {
+    refCallback.current = callback
+  }, [callback])
+
+  // ロケーションに変更があったときに処理実行
+  useEffect(() => {
+    if (refCallback.current) {
+      refCallback.current(location)
+    }
+  }, [location])
+}
+
 
 const BookDetails = () => {
   const bookId = Number(useParams().postId);
@@ -26,6 +44,10 @@ const BookDetails = () => {
     bookId
   }
 
+  useLocationChange((location) => {
+    window.scrollTo(0,0)
+  })
+  
   return (
     <div>
       <AppHeader isLogin={false} />
