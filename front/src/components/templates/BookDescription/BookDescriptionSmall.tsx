@@ -6,6 +6,8 @@ import AppContainer from "../../layouts/AppContainer";
 
 export type BookDescriptionSmallPropsType = {
   title: string;
+  subTitle: string;
+  imgUrl: string;
   star: number;
   auther: string;
   publisher: string;
@@ -14,7 +16,7 @@ export type BookDescriptionSmallPropsType = {
   bookId: number;
 }
 
-const BookDescriptionSmall = ({title, star, auther, publisher, date, numReviews, bookId}: BookDescriptionSmallPropsType) => {
+const BookDescriptionSmall = ({title, subTitle, imgUrl, star, auther, publisher, date, numReviews, bookId}: BookDescriptionSmallPropsType) => {
   const formatDate = (date: Date) => {
     const y = date.getFullYear();
     const m = ("00" + (date.getMonth()+1)).slice(-2);
@@ -29,11 +31,12 @@ const BookDescriptionSmall = ({title, star, auther, publisher, date, numReviews,
           <div className="container px-0 py-6 mx-auto">
             <div className="grid grid-cols-5">
               <div className="col-span-1">
-                <BookImage />
+                <BookImage imgUrl={imgUrl} />
               </div>
               <div className="col-span-4 px-3">
                 <div>
                   <GradeText text={title} grade={4} />
+                  <GradeText text={subTitle} grade={3} />
                   <ReactStars
                     count={5}
                     value={star}

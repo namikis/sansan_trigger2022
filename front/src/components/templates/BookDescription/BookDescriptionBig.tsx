@@ -9,16 +9,18 @@ import VerticalMargin from "../../atoms/Margin/VerticaMargin";
 
 export type BookDescriptionPropsType = {
   title: string;
+  subTitle: string;
   star: number;
   auther: string;
   publisher: string;
   date: Date;
   description: string;
   numReviews: number;
-  bookId: number
+  bookId: number;
+  imgUrl: string;
 }
 
-const BookDescription = ({title, star, auther, publisher, date, description, numReviews, bookId}: BookDescriptionPropsType) => {
+const BookDescription = ({title, subTitle, star, auther, publisher, date, description, numReviews, bookId, imgUrl}: BookDescriptionPropsType) => {
   const formatDate = (date: Date) => {
     const y = date.getFullYear();
     const m = ("00" + (date.getMonth()+1)).slice(-2);
@@ -29,14 +31,15 @@ const BookDescription = ({title, star, auther, publisher, date, description, num
   return (
     <section className="text-gray-600 body-font bg-gray-100">
       <AppContainer>
-      <div className="container px-0 py-6 mx-auto">
+      <div className="container px-0 py-6">
         <div className="grid grid-cols-5">
-          <div className="col-span-2">
-            <BookImage />
+          <div className="col-span-2 my-auto">
+            <BookImage imgUrl={imgUrl} />
           </div>
           <div className="col-span-3 pl-3">
             <div className="my-2">
               <MainTitle title={title} />
+              <GradeText text={subTitle} grade={4} />
               <VerticalMargin y="8" />
               <ReactStars
                 count={5}
