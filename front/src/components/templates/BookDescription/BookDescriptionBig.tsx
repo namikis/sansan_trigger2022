@@ -58,7 +58,7 @@ const BookDescription = ({title, subTitle, star, auther, publisher, date, descri
                 <GradeText text={description} grade={2} />
               </div>
               <div className="my-2">
-                <Link to={`/rental`}>
+                <Link to={`/rental/${bookId}`}>
                   <div className="bg-brown-base w-48 py-2 rounded hover:bg-brown-base-shadow ">
                     <p className="text-center text-white text-lg ">この本を借りる</p>
                   </div>

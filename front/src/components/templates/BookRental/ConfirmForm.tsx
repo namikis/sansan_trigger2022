@@ -11,8 +11,27 @@ import MainTitle from '../../atoms/Title/MainTitle';
 import BookImage from '../../atoms/Image/BookImage';
 import BookCard from '../../molecules/Card/BookCard';
 import SubTitle from '../../atoms/Title/SubTitle';
+import bookJson from '../../../assets/data/jsons/books.json';
 
-const ConfirmForm:React.FC<rentalStepType> = ({setNowPage}) => {
+type JsonType = {
+  title: string;
+  description: string;
+  imgUrl: string;
+}
+
+const ConfirmForm:React.FC<rentalStepType> = ({setNowPage, bookId}) => {
+  const bookDetails = bookJson as JsonType[];
+
+  const title = bookDetails[bookId].title;
+  const description = bookDetails[bookId].description;
+  const imgUrl = bookDetails[bookId].imgUrl;
+
+  // const bookDescriptionProps: BookDescriptionPropsType = {
+  //   title,
+  //   description,
+  //   bookId,
+  //   imgUrl
+  // }
   return (
     <div className=" py-32 px-10">
       <div className="p-10 md:w-3/4 lg:w-1/2 mx-auto shadow-xl rounded-xl bg-white">
@@ -22,12 +41,12 @@ const ConfirmForm:React.FC<rentalStepType> = ({setNowPage}) => {
           <div className='text-center mb-12'>
             <MainTitle title='この本を借りますか?' color='text-gray-600'/>
             <div className='mb-8'></div>
-            <BookImage imgUrl={sampleBookImg} />
+            <BookImage imgUrl={imgUrl} />
             <div className='mb-8'></div>
-            <SubTitle title='入門Python3' color='text-gray-800' />
+            <SubTitle title={title} color='text-gray-800' />
             <div className='mb-2'></div>
             <div className='text-gray-600'>
-              データサイエンスやウェブ開発、セキュリティなど
+              {description}
             </div>
           </div>
 

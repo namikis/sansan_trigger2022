@@ -7,7 +7,7 @@ import SubTitle from '../../../components/atoms/Title/SubTitle';
 
 import appHeaderImg from "../../../assets/images/header.png";
 
-const RentalStep2:React.FC<rentalStepType> = ({setNowPage}) => {
+const RentalStep2:React.FC<rentalStepType> = ({setNowPage, bookId}) => {
   const sleep = (waitTime:number) => new Promise( resolve => setTimeout(resolve, waitTime) );
   const [load, setLoad] = useState<boolean>(true);
   (async ()=>{
@@ -40,7 +40,7 @@ const RentalStep2:React.FC<rentalStepType> = ({setNowPage}) => {
         </>
         :
         <>
-          <CompleteRental setNowPage={setNowPage}/>
+          <CompleteRental setNowPage={setNowPage} bookId={bookId} />
           <StepBar2 w1="100%" w2="100%"/>
         </>
       }

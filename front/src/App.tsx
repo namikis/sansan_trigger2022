@@ -25,7 +25,9 @@ function App() {
             <Route path=":postId" element={<PostPage />} />
           </Route>
           <Route path="/store" element={<BookStore/>} />
-          <Route path="/rental" element={<BookRental/>} />
+          <Route path="/rental" element={<BookRental/>}>
+            <Route path=":postId" element={<BookRental/>} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </Provider>
