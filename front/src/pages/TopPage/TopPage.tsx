@@ -7,6 +7,8 @@ import AppContainer from '../../components/layouts/AppContainer';
 import MessageText from '../../components/atoms/Text/MessageText';
 import BaseSearch from '../../components/atoms/Search/BaseSearch';
 import SearchLottie from '../../components/atoms/Lottie/SearchLottie';
+import BookImage from '../../components/atoms/Image/BookImage';
+import banner from '../../assets/images/awsbanner.png';
 
 const TopPage = () => {
   return (
@@ -41,7 +43,9 @@ const TopPage = () => {
       </div>
 
       <AppContainer>
-        <div className="my-12 py-6 h-24 w-full object-cover object-center rounded-lg bg-gray-300 text-center text-xl text-gray-600" ><p>バナー</p></div>
+        <div className='bg-gray-300 rounded-3xl'>
+          <img className="mx-auto" src={banner} alt="blog" />
+        </div>
         <BookList />
       </AppContainer>
 

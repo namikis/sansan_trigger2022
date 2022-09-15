@@ -6,10 +6,10 @@ const BookList = () => {
   const books = booksJson;
 
   return (
-    <div>
+    <div className="my-5">
         <SubTitle title="おすすめの本" />
         <section className="text-gray-600 body-font">
-        <div className="container px-0 py-6 mx-auto">
+        <div className="container px-0 py-0 mx-auto">
             <div className="flex flex-wrap -m-1">
             {books.map((book,key)=>{
               return <BookCard index={key} key={key} book={book}/>
