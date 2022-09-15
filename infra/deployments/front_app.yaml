@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+spec:
+  selector:
+    matchLabels:
+      app: frontend
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend
+        image: 366536239775.dkr.ecr.ap-northeast-1.amazonaws.com/teamd-frontend:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        # env:
+        # - name: BACKEND_URL
+        #   value: http://backend.backend:5000/messages
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+spec:
+  type: LoadBalancer
+  selector:
+    app: frontend
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80

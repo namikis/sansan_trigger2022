@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+  front:
+    image: 366536239775.dkr.ecr.ap-northeast-1.amazonaws.com/teamd-frontend
+    build:
+      context: ./front
+      dockerfile: Dockerfile
+    container_name: front-sansan_trigger2022
+    ports:
+      - 3000:80
+    tty: true
+    platform: linux/x86_64
+
+  server:
+    image: 366536239775.dkr.ecr.ap-northeast-1.amazonaws.com/teamd-backend
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    container_name: server-sansan_trigger2022
+    env_file:
+      - docker-compose.env
+    tty: true
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+    platform: linux/x86_64
+
+  db:
+    image: 366536239775.dkr.ecr.ap-northeast-1.amazonaws.com/teamd-db
+    container_name: db-sansan_trigger2022
+    build:
+      context: ./db
+      dockerfile: Dockerfile
+    ports:
+      - 5432:5432
+    volumes:
+      - ./db/data:/var/lib/postgresql/data
+    env_file:
+      - docker-compose.env
+    restart: always
+    platform: linux/x86_64
